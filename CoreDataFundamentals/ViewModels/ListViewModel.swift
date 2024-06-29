@@ -19,4 +19,9 @@ class ListViewModel{
     func loadData(){
         dataList = storageProvider.getAllMovies()
     }
+    
+    func removeData(at index:Int){
+        let movie = self.dataList.remove(at: index)
+        storageProvider.deleteMovie(movie: movie)
+    }
 }

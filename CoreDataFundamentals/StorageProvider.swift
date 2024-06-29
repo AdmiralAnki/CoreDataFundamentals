@@ -35,9 +35,7 @@ extension StorageProvider{
             debugPrint("error: \(error.localizedDescription)")
         }
     }
-}
-
-extension StorageProvider{
+    
     func getAllMovies()->[Movie]{
         let request:NSFetchRequest<Movie> = Movie.fetchRequest()
         
@@ -50,4 +48,16 @@ extension StorageProvider{
             return []
         }
     }
+    
+    func deleteMovie(movie:Movie){
+        persistentContainer.viewContext.delete(movie)
+        
+        do{
+            try persistentContainer.viewContext.save()
+        }catch{
+            persistentContainer.viewContext.rollback()
+            debugPrint("error deleting: \(error.localizedDescription)")
+        }
+    }
+    
 }

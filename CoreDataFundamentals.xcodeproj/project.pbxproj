@@ -12,7 +12,7 @@
 		B2ABE0692C30161500D10FA4 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ABE0682C30161500D10FA4 /* ListViewModel.swift */; };
 		B2DA0F052C2EFBA6003435DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA0F042C2EFBA6003435DB /* AppDelegate.swift */; };
 		B2DA0F072C2EFBA6003435DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA0F062C2EFBA6003435DB /* SceneDelegate.swift */; };
-		B2DA0F092C2EFBA6003435DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA0F082C2EFBA6003435DB /* ViewController.swift */; };
+		B2DA0F092C2EFBA6003435DB /* AddMoviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA0F082C2EFBA6003435DB /* AddMoviewViewController.swift */; };
 		B2DA0F0E2C2EFBA8003435DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2DA0F0D2C2EFBA8003435DB /* Assets.xcassets */; };
 		B2DA0F112C2EFBA8003435DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DA0F0F2C2EFBA8003435DB /* LaunchScreen.storyboard */; };
 		B2DA0F1A2C2EFC72003435DB /* CDFundamentals.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2DA0F182C2EFC72003435DB /* CDFundamentals.xcdatamodeld */; };
@@ -26,7 +26,7 @@
 		B2DA0F012C2EFBA6003435DB /* CoreDataFundamentals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataFundamentals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DA0F042C2EFBA6003435DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2DA0F062C2EFBA6003435DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B2DA0F082C2EFBA6003435DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2DA0F082C2EFBA6003435DB /* AddMoviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoviewViewController.swift; sourceTree = "<group>"; };
 		B2DA0F0D2C2EFBA8003435DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2DA0F102C2EFBA8003435DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2DA0F122C2EFBA8003435DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +45,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B2D94DE12C303BDF00E9A45F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B2ABE0642C2FEE0900D10FA4 /* MovieList.swift */,
+				B2DA0F082C2EFBA6003435DB /* AddMoviewViewController.swift */,
+				B2ABE0662C3010B300D10FA4 /* ListViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B2D94DE22C303BF000E9A45F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B2ABE0682C30161500D10FA4 /* ListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		B2DA0EF82C2EFBA6003435DB = {
 			isa = PBXGroup;
 			children = (
@@ -64,17 +82,15 @@
 		B2DA0F032C2EFBA6003435DB /* CoreDataFundamentals */ = {
 			isa = PBXGroup;
 			children = (
+				B2D94DE22C303BF000E9A45F /* ViewModels */,
+				B2D94DE12C303BDF00E9A45F /* Views */,
 				B2DA0F042C2EFBA6003435DB /* AppDelegate.swift */,
 				B2DA0F062C2EFBA6003435DB /* SceneDelegate.swift */,
-				B2DA0F082C2EFBA6003435DB /* ViewController.swift */,
 				B2DA0F182C2EFC72003435DB /* CDFundamentals.xcdatamodeld */,
 				B2DA0F0D2C2EFBA8003435DB /* Assets.xcassets */,
 				B2DA0F0F2C2EFBA8003435DB /* LaunchScreen.storyboard */,
 				B2DA0F122C2EFBA8003435DB /* Info.plist */,
 				B2DA0F1B2C2EFDAB003435DB /* StorageProvider.swift */,
-				B2ABE0642C2FEE0900D10FA4 /* MovieList.swift */,
-				B2ABE0662C3010B300D10FA4 /* ListViewController.swift */,
-				B2ABE0682C30161500D10FA4 /* ListViewModel.swift */,
 			);
 			path = CoreDataFundamentals;
 			sourceTree = "<group>";
@@ -151,7 +167,7 @@
 			files = (
 				B2ABE0652C2FEE0900D10FA4 /* MovieList.swift in Sources */,
 				B2DA0F1A2C2EFC72003435DB /* CDFundamentals.xcdatamodeld in Sources */,
-				B2DA0F092C2EFBA6003435DB /* ViewController.swift in Sources */,
+				B2DA0F092C2EFBA6003435DB /* AddMoviewViewController.swift in Sources */,
 				B2DA0F052C2EFBA6003435DB /* AppDelegate.swift in Sources */,
 				B2DA0F072C2EFBA6003435DB /* SceneDelegate.swift in Sources */,
 				B2DA0F1C2C2EFDAB003435DB /* StorageProvider.swift in Sources */,

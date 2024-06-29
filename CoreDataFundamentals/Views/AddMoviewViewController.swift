@@ -7,22 +7,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AddMovieViewController: UIViewController {
 
     var submitButton:UIButton!
     var textField:UITextField
     let storageProvider:StorageProvider
-    
+    var dismissAction:()->()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
+        self.title = "Add a new movie"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissVC))
     }
 
-    init(storageProvider:StorageProvider) {
-        self.submitButton = ViewController.createButton()
-        self.textField = ViewController.creatTextField()
+    init(storageProvider:StorageProvider, dismissAction:@escaping ()->()) {
+        self.submitButton = AddMovieViewController.createButton()
+        self.textField = AddMovieViewController.creatTextField()
         self.storageProvider = storageProvider
+        self.dismissAction = dismissAction
         super.init(nibName: nil, bundle: nil)
         
         layoutViews()
@@ -32,6 +41,11 @@ class ViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    @objc func dismissVC(){
+        self.dismissAction()
+        self.dismiss(animated: true)
+    }
     
     static func createButton()->UIButton{
         
@@ -57,6 +71,7 @@ class ViewController: UIViewController {
     @objc func submitNewMovie(){
         if let name = textField.text{
             storageProvider.saveMovie(named: name)
+            self.dismissVC()
         }else{
             debugPrint("No text entered!!")
         }

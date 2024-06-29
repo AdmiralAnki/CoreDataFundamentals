@@ -26,6 +26,7 @@ class MovieList: UIView {
         
         tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+//        tableView.backgroundColor = .brown
         
         addSubview(tableView)
         
@@ -38,3 +39,8 @@ class MovieList: UIView {
     }
 
 }
+
+#Preview("test"){
+    MovieList(frame: CGRect(x: 0, y: 0, width: 300, height: 600))
+}
+
