@@ -16,15 +16,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         var window = UIWindow(windowScene: windowScene)
-        let viewController = ViewController(storageProvider: StorageProvider())
         
-        window.rootViewController = viewController
+        
+        window.rootViewController = createInitialViewController()
         window.makeKeyAndVisible()
         
         self.window = window
 
     }
 
+    func createInitialViewController()->UIViewController{
+        let viewModel = ListViewModel(storageProvider: StorageProvider())
+        let viewController = ListViewController(viewModel: viewModel)
+        return UINavigationController(rootViewController: viewController)
+    }
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

@@ -9,18 +9,32 @@ import UIKit
 
 class MovieList: UIView {
     
-    var submitButton:UIButton!
-    var textField:UITextField!
-//    var tableView:UITableView
+    var tableView:UITableView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configureView()
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
+        super.init(coder: coder)        
     }
     
-    
-    
+    private func configureView(){
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.backgroundColor = .purple
+        
+        tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubview(tableView)
+        
+        NSLayoutConstraint.activate([
+            tableView.heightAnchor.constraint(equalTo: heightAnchor),
+            tableView.widthAnchor.constraint(equalTo: widthAnchor),
+            tableView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            tableView.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
+    }
+
 }
