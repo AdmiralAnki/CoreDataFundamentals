@@ -10,9 +10,10 @@
 		B2DA0F052C2EFBA6003435DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA0F042C2EFBA6003435DB /* AppDelegate.swift */; };
 		B2DA0F072C2EFBA6003435DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA0F062C2EFBA6003435DB /* SceneDelegate.swift */; };
 		B2DA0F092C2EFBA6003435DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA0F082C2EFBA6003435DB /* ViewController.swift */; };
-		B2DA0F0C2C2EFBA6003435DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DA0F0A2C2EFBA6003435DB /* Main.storyboard */; };
 		B2DA0F0E2C2EFBA8003435DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2DA0F0D2C2EFBA8003435DB /* Assets.xcassets */; };
 		B2DA0F112C2EFBA8003435DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DA0F0F2C2EFBA8003435DB /* LaunchScreen.storyboard */; };
+		B2DA0F1A2C2EFC72003435DB /* CDFundamentals.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2DA0F182C2EFC72003435DB /* CDFundamentals.xcdatamodeld */; };
+		B2DA0F1C2C2EFDAB003435DB /* StorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA0F1B2C2EFDAB003435DB /* StorageProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +21,11 @@
 		B2DA0F042C2EFBA6003435DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2DA0F062C2EFBA6003435DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B2DA0F082C2EFBA6003435DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B2DA0F0B2C2EFBA6003435DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2DA0F0D2C2EFBA8003435DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2DA0F102C2EFBA8003435DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2DA0F122C2EFBA8003435DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2DA0F192C2EFC72003435DB /* CDFundamentals.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDFundamentals.xcdatamodel; sourceTree = "<group>"; };
+		B2DA0F1B2C2EFDAB003435DB /* StorageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +61,11 @@
 				B2DA0F042C2EFBA6003435DB /* AppDelegate.swift */,
 				B2DA0F062C2EFBA6003435DB /* SceneDelegate.swift */,
 				B2DA0F082C2EFBA6003435DB /* ViewController.swift */,
-				B2DA0F0A2C2EFBA6003435DB /* Main.storyboard */,
+				B2DA0F182C2EFC72003435DB /* CDFundamentals.xcdatamodeld */,
 				B2DA0F0D2C2EFBA8003435DB /* Assets.xcassets */,
 				B2DA0F0F2C2EFBA8003435DB /* LaunchScreen.storyboard */,
 				B2DA0F122C2EFBA8003435DB /* Info.plist */,
+				B2DA0F1B2C2EFDAB003435DB /* StorageProvider.swift */,
 			);
 			path = CoreDataFundamentals;
 			sourceTree = "<group>";
@@ -127,7 +130,6 @@
 			files = (
 				B2DA0F112C2EFBA8003435DB /* LaunchScreen.storyboard in Resources */,
 				B2DA0F0E2C2EFBA8003435DB /* Assets.xcassets in Resources */,
-				B2DA0F0C2C2EFBA6003435DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +140,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2DA0F1A2C2EFC72003435DB /* CDFundamentals.xcdatamodeld in Sources */,
 				B2DA0F092C2EFBA6003435DB /* ViewController.swift in Sources */,
 				B2DA0F052C2EFBA6003435DB /* AppDelegate.swift in Sources */,
 				B2DA0F072C2EFBA6003435DB /* SceneDelegate.swift in Sources */,
+				B2DA0F1C2C2EFDAB003435DB /* StorageProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B2DA0F0A2C2EFBA6003435DB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B2DA0F0B2C2EFBA6003435DB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B2DA0F0F2C2EFBA8003435DB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +293,6 @@
 				INFOPLIST_FILE = CoreDataFundamentals/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +320,6 @@
 				INFOPLIST_FILE = CoreDataFundamentals/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -363,6 +357,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B2DA0F182C2EFC72003435DB /* CDFundamentals.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B2DA0F192C2EFC72003435DB /* CDFundamentals.xcdatamodel */,
+			);
+			currentVersion = B2DA0F192C2EFC72003435DB /* CDFundamentals.xcdatamodel */;
+			path = CDFundamentals.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B2DA0EF92C2EFBA6003435DB /* Project object */;
 }
