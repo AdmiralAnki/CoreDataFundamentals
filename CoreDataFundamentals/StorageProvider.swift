@@ -36,3 +36,18 @@ extension StorageProvider{
         }
     }
 }
+
+extension StorageProvider{
+    func getAllMovies()->[Movie]{
+        let request:NSFetchRequest<Movie> = Movie.fetchRequest()
+        
+        do{
+            let movies = try persistentContainer.viewContext.fetch(request)
+            return movies
+            
+        }catch{
+            debugPrint("Error: \(error.localizedDescription)")
+            return []
+        }
+    }
+}
