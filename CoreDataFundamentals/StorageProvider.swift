@@ -27,13 +27,7 @@ extension StorageProvider{
         let movie = Movie(context:persistentContainer.viewContext)
         movie.name = name
         
-        do{
-            try persistentContainer.viewContext.save()
-            debugPrint("Movie saved")
-        }catch{
-            persistentContainer.viewContext.rollback()
-            debugPrint("error: \(error.localizedDescription)")
-        }
+        saveContext()
     }
     
     func getAllMovies()->[Movie]{
@@ -51,7 +45,14 @@ extension StorageProvider{
     
     func deleteMovie(movie:Movie){
         persistentContainer.viewContext.delete(movie)
-        
+        saveContext()
+    }
+    
+    func updateMovie(){
+        saveContext()
+    }
+    
+    fileprivate func saveContext() {
         do{
             try persistentContainer.viewContext.save()
         }catch{

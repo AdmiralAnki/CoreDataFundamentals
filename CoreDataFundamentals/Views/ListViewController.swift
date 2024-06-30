@@ -66,7 +66,13 @@ class ListViewController:UIViewController{
     }
     
     @objc func showItemCreator(){
-        let addMovieViewController = AddMovieViewController(storageProvider: viewModel.storageProvider, dismissAction: {
+        showMovieEditor()
+    }
+    
+    
+    
+    fileprivate func showMovieEditor(movie:Movie? = nil) {
+        let addMovieViewController = AddMovieViewController(storageProvider: viewModel.storageProvider, movie: movie, dismissAction: {
             self.reloadData()
         })
         addMovieViewController.modalPresentationStyle = .pageSheet
@@ -74,6 +80,7 @@ class ListViewController:UIViewController{
         let navCon = UINavigationController(rootViewController: addMovieViewController)
         self.present(navCon, animated: true)
     }
+    
 }
 
 extension ListViewController:UITableViewDataSource{
@@ -109,6 +116,9 @@ extension ListViewController:UITableViewDelegate{
     }
     //allow editing
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        var movie = viewModel.dataList[indexPath.row]
+        showMovieEditor(movie: movie)
     
     }
 }

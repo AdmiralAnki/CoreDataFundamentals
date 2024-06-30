@@ -9,15 +9,28 @@ import UIKit
 
 class AddMovieViewController: UIViewController {
 
+    enum Mode{
+        case edit
+        case add
+    }
+    
     var submitButton:UIButton!
     var textField:UITextField
     let storageProvider:StorageProvider
     var dismissAction:()->()
+    var movie:Movie?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
         self.title = "Add a new movie"
+        layoutViews()
+        
+        if let movie{
+            textField.text = movie.name
+        }else{
+            textField.text = ""
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,14 +40,13 @@ class AddMovieViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissVC))
     }
 
-    init(storageProvider:StorageProvider, dismissAction:@escaping ()->()) {
+    init(storageProvider:StorageProvider,movie:Movie?, dismissAction:@escaping ()->()) {
         self.submitButton = AddMovieViewController.createButton()
         self.textField = AddMovieViewController.creatTextField()
         self.storageProvider = storageProvider
         self.dismissAction = dismissAction
+        self.movie = movie
         super.init(nibName: nil, bundle: nil)
-        
-        layoutViews()
     }
     
     required init?(coder: NSCoder) {
@@ -70,7 +82,12 @@ class AddMovieViewController: UIViewController {
     
     @objc func submitNewMovie(){
         if let name = textField.text{
-            storageProvider.saveMovie(named: name)
+            if let movie{
+                movie.name = name
+                storageProvider.updateMovie()
+            }else{
+                storageProvider.saveMovie(named: name)
+            }
             self.dismissVC()
         }else{
             debugPrint("No text entered!!")
@@ -86,7 +103,7 @@ class AddMovieViewController: UIViewController {
         view.addSubview(submitButton)
         
         NSLayoutConstraint.activate([
-            textField.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.15),
+            textField.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.10),
             textField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7),
             textField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             textField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50)
@@ -95,8 +112,8 @@ class AddMovieViewController: UIViewController {
         submitButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            submitButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.12),
-            submitButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+            submitButton.heightAnchor.constraint(equalToConstant: 80),
+            submitButton.widthAnchor.constraint(equalToConstant: 160),
             submitButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             submitButton.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 15)
         ])
