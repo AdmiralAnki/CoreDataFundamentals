@@ -17,6 +17,9 @@
 		B2DA0F112C2EFBA8003435DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DA0F0F2C2EFBA8003435DB /* LaunchScreen.storyboard */; };
 		B2DA0F1A2C2EFC72003435DB /* CDFundamentals.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2DA0F182C2EFC72003435DB /* CDFundamentals.xcdatamodeld */; };
 		B2DA0F1C2C2EFDAB003435DB /* StorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA0F1B2C2EFDAB003435DB /* StorageProvider.swift */; };
+		B2FC0BF22C32E5AC00CD91A8 /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC0BF12C32E5AC00CD91A8 /* UIImageTransformer.swift */; };
+		B2FC0BF52C330B5100CD91A8 /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC0BF32C330B5100CD91A8 /* Movie+CoreDataClass.swift */; };
+		B2FC0BF62C330B5100CD91A8 /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC0BF42C330B5100CD91A8 /* Movie+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		B2DA0F122C2EFBA8003435DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2DA0F192C2EFC72003435DB /* CDFundamentals.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDFundamentals.xcdatamodel; sourceTree = "<group>"; };
 		B2DA0F1B2C2EFDAB003435DB /* StorageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProvider.swift; sourceTree = "<group>"; };
+		B2FC0BF12C32E5AC00CD91A8 /* UIImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTransformer.swift; sourceTree = "<group>"; };
+		B2FC0BF32C330B5100CD91A8 /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2FC0BF42C330B5100CD91A8 /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 		B2DA0F032C2EFBA6003435DB /* CoreDataFundamentals */ = {
 			isa = PBXGroup;
 			children = (
+				B2FC0BF72C330B6300CD91A8 /* ManagedObjects */,
 				B2D94DE22C303BF000E9A45F /* ViewModels */,
 				B2D94DE12C303BDF00E9A45F /* Views */,
 				B2DA0F042C2EFBA6003435DB /* AppDelegate.swift */,
@@ -91,8 +98,18 @@
 				B2DA0F0F2C2EFBA8003435DB /* LaunchScreen.storyboard */,
 				B2DA0F122C2EFBA8003435DB /* Info.plist */,
 				B2DA0F1B2C2EFDAB003435DB /* StorageProvider.swift */,
+				B2FC0BF12C32E5AC00CD91A8 /* UIImageTransformer.swift */,
 			);
 			path = CoreDataFundamentals;
+			sourceTree = "<group>";
+		};
+		B2FC0BF72C330B6300CD91A8 /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				B2FC0BF32C330B5100CD91A8 /* Movie+CoreDataClass.swift */,
+				B2FC0BF42C330B5100CD91A8 /* Movie+CoreDataProperties.swift */,
+			);
+			path = ManagedObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,11 +184,14 @@
 			files = (
 				B2ABE0652C2FEE0900D10FA4 /* MovieList.swift in Sources */,
 				B2DA0F1A2C2EFC72003435DB /* CDFundamentals.xcdatamodeld in Sources */,
+				B2FC0BF22C32E5AC00CD91A8 /* UIImageTransformer.swift in Sources */,
 				B2DA0F092C2EFBA6003435DB /* AddMoviewViewController.swift in Sources */,
 				B2DA0F052C2EFBA6003435DB /* AppDelegate.swift in Sources */,
+				B2FC0BF62C330B5100CD91A8 /* Movie+CoreDataProperties.swift in Sources */,
 				B2DA0F072C2EFBA6003435DB /* SceneDelegate.swift in Sources */,
 				B2DA0F1C2C2EFDAB003435DB /* StorageProvider.swift in Sources */,
 				B2ABE0692C30161500D10FA4 /* ListViewModel.swift in Sources */,
+				B2FC0BF52C330B5100CD91A8 /* Movie+CoreDataClass.swift in Sources */,
 				B2ABE0672C3010B300D10FA4 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

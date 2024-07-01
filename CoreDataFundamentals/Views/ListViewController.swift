@@ -93,7 +93,7 @@ extension ListViewController:UITableViewDataSource{
         let cell = movieView.tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
         var contentConfig = cell.defaultContentConfiguration()
-        contentConfig.text = viewModel.dataList[indexPath.row].name
+        contentConfig.text = viewModel.dataList[indexPath.row].title
         
         cell.contentConfiguration = contentConfig
         

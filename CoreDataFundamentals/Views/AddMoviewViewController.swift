@@ -27,7 +27,7 @@ class AddMovieViewController: UIViewController {
         layoutViews()
         
         if let movie{
-            textField.text = movie.name
+            textField.text = movie.title
         }else{
             textField.text = ""
         }
@@ -83,7 +83,7 @@ class AddMovieViewController: UIViewController {
     @objc func submitNewMovie(){
         if let name = textField.text{
             if let movie{
-                movie.name = name
+                movie.title = name
                 storageProvider.updateMovie()
             }else{
                 storageProvider.saveMovie(named: name)

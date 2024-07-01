@@ -11,6 +11,9 @@ class StorageProvider{
     let persistentContainer: NSPersistentContainer
     
     init() {
+        
+        
+        ValueTransformer.setValueTransformer(UIImageTransformer(), forName: NSValueTransformerName("UIImageTransformer"))
         self.persistentContainer  = NSPersistentContainer(name: "CDFundamentals")
         
         persistentContainer.loadPersistentStores { description, error in
@@ -25,7 +28,7 @@ class StorageProvider{
 extension StorageProvider{
     func saveMovie(named name:String){
         let movie = Movie(context:persistentContainer.viewContext)
-        movie.name = name
+        movie.title = name
         
         saveContext()
     }
