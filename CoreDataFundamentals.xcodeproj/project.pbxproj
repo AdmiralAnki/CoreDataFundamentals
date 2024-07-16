@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B245715D2C3AB90D00C6F363 /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245715B2C3AB90D00C6F363 /* Movie+CoreDataClass.swift */; };
+		B245715E2C3AB90D00C6F363 /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245715C2C3AB90D00C6F363 /* Movie+CoreDataProperties.swift */; };
 		B2ABE0652C2FEE0900D10FA4 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ABE0642C2FEE0900D10FA4 /* MovieList.swift */; };
 		B2ABE0672C3010B300D10FA4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ABE0662C3010B300D10FA4 /* ListViewController.swift */; };
 		B2ABE0692C30161500D10FA4 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ABE0682C30161500D10FA4 /* ListViewModel.swift */; };
@@ -18,11 +20,11 @@
 		B2DA0F1A2C2EFC72003435DB /* CDFundamentals.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2DA0F182C2EFC72003435DB /* CDFundamentals.xcdatamodeld */; };
 		B2DA0F1C2C2EFDAB003435DB /* StorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA0F1B2C2EFDAB003435DB /* StorageProvider.swift */; };
 		B2FC0BF22C32E5AC00CD91A8 /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC0BF12C32E5AC00CD91A8 /* UIImageTransformer.swift */; };
-		B2FC0BF52C330B5100CD91A8 /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC0BF32C330B5100CD91A8 /* Movie+CoreDataClass.swift */; };
-		B2FC0BF62C330B5100CD91A8 /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC0BF42C330B5100CD91A8 /* Movie+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B245715B2C3AB90D00C6F363 /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Movie+CoreDataClass.swift"; path = "../../Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B245715C2C3AB90D00C6F363 /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Movie+CoreDataProperties.swift"; path = "../../Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B2ABE0642C2FEE0900D10FA4 /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
 		B2ABE0662C3010B300D10FA4 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		B2ABE0682C30161500D10FA4 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
@@ -36,8 +38,6 @@
 		B2DA0F192C2EFC72003435DB /* CDFundamentals.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDFundamentals.xcdatamodel; sourceTree = "<group>"; };
 		B2DA0F1B2C2EFDAB003435DB /* StorageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProvider.swift; sourceTree = "<group>"; };
 		B2FC0BF12C32E5AC00CD91A8 /* UIImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTransformer.swift; sourceTree = "<group>"; };
-		B2FC0BF32C330B5100CD91A8 /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
-		B2FC0BF42C330B5100CD91A8 /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +106,8 @@
 		B2FC0BF72C330B6300CD91A8 /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
-				B2FC0BF32C330B5100CD91A8 /* Movie+CoreDataClass.swift */,
-				B2FC0BF42C330B5100CD91A8 /* Movie+CoreDataProperties.swift */,
+				B245715B2C3AB90D00C6F363 /* Movie+CoreDataClass.swift */,
+				B245715C2C3AB90D00C6F363 /* Movie+CoreDataProperties.swift */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -186,12 +186,12 @@
 				B2DA0F1A2C2EFC72003435DB /* CDFundamentals.xcdatamodeld in Sources */,
 				B2FC0BF22C32E5AC00CD91A8 /* UIImageTransformer.swift in Sources */,
 				B2DA0F092C2EFBA6003435DB /* AddMoviewViewController.swift in Sources */,
+				B245715D2C3AB90D00C6F363 /* Movie+CoreDataClass.swift in Sources */,
 				B2DA0F052C2EFBA6003435DB /* AppDelegate.swift in Sources */,
-				B2FC0BF62C330B5100CD91A8 /* Movie+CoreDataProperties.swift in Sources */,
 				B2DA0F072C2EFBA6003435DB /* SceneDelegate.swift in Sources */,
 				B2DA0F1C2C2EFDAB003435DB /* StorageProvider.swift in Sources */,
 				B2ABE0692C30161500D10FA4 /* ListViewModel.swift in Sources */,
-				B2FC0BF52C330B5100CD91A8 /* Movie+CoreDataClass.swift in Sources */,
+				B245715E2C3AB90D00C6F363 /* Movie+CoreDataProperties.swift in Sources */,
 				B2ABE0672C3010B300D10FA4 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
